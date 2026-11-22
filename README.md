@@ -1,6 +1,6 @@
 # SYNTRA Website
 
-Official website source for SYNTRA Group.
+Official website source for SYNTRA Group.\n\nCurrent website version: **v1.1**.
 
 ## Deploy with GitHub Pages
 
@@ -12,7 +12,7 @@ Official website source for SYNTRA Group.
 
 ## Website files
 
-- `index.html` — responsive SYNTRA landing page.
+- `index.html` — responsive SYNTRA landing page (v1.1).\n- `assets/syntra-mark.svg` — shared SYNTRA brand mark and favicon.
 - Product source repositories:
   - [SYNTRA OS](https://github.com/dea78799-dotcom/SyntraOS)
   - [SYNTRA FILES](https://github.com/dea78799-dotcom/Syntra-Files)
