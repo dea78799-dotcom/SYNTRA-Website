@@ -2,7 +2,7 @@
 
 Official website source for SYNTRA Group.
 
-Current website version: **v1.3**.
+Current website version: **v1.4**.
 
 ## Deploy with GitHub Pages
 
@@ -14,9 +14,10 @@ Current website version: **v1.3**.
 
 ## Website files
 
-- `index.html` — responsive SYNTRA landing page with accessible mobile navigation, social metadata and reading progress (v1.3).
+- `index.html` — responsive SYNTRA landing page with accessible mobile navigation, social metadata, reading progress and latest-updates preview (v1.4).
 - `products/syntra-os.html` — product overview for SYNTRA OS.
 - `products/syntra-files.html` — product overview for SYNTRA FILES.
+- `updates/index.html` — version history and project update notes for SYNTRA OS and SYNTRA FILES.
 - `assets/syntra-files-logo.svg` — SYNTRA FILES product logo.
 - `assets/syntra-mark.svg` — shared SYNTRA brand mark and favicon.
 - Product source repositories:
