@@ -2,7 +2,7 @@
 
 Official website source for SYNTRA Group.
 
-Current website version: **v1.4**.
+Current website version: **v1.5**.
 
 ## Deploy with GitHub Pages
 
@@ -14,10 +14,11 @@ Current website version: **v1.4**.
 
 ## Website files
 
-- `index.html` — responsive SYNTRA landing page with accessible mobile navigation, social metadata, reading progress and latest-updates preview (v1.4).
+- `index.html` — responsive SYNTRA landing page with accessible mobile navigation, social metadata, reading progress and latest-updates preview, project testing status and Download Center entry (v1.5).
 - `products/syntra-os.html` — product overview for SYNTRA OS.
 - `products/syntra-files.html` — product overview for SYNTRA FILES.
 - `updates/index.html` — version history and project update notes for SYNTRA OS and SYNTRA FILES.
+- `downloads/index.html` — Download Center with release status for both projects; direct installation links remain disabled until verified official packages are published.
 - `assets/syntra-files-logo.svg` — SYNTRA FILES product logo.
 - `assets/syntra-mark.svg` — shared SYNTRA brand mark and favicon.
 - Product source repositories:
@@ -26,6 +27,6 @@ Current website version: **v1.4**.
 
 ## APK publishing
 
-The download section intentionally remains marked **Not released** until a real, tested APK is added. Do not point the download button to a placeholder or a source-code ZIP.
+SYNTRA FILES is currently in testing and upgrade. The Download Center intentionally keeps APK installation disabled until a real official package has been built and checked. SYNTRA OS has no end-user installer confirmed. Never present a CI artifact or source-code ZIP as a ready-to-install release.
 
 Public contact: vanhuong05042025@gmail.com
