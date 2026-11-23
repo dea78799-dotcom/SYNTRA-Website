@@ -2,7 +2,7 @@
 
 Official website source for SYNTRA Group.
 
-Current website version: **v2.3**.
+Current website version: **v2.4**.
 
 ## Deploy with GitHub Pages
 
@@ -39,6 +39,14 @@ Public contact: vanhuong05042025@gmail.com
 Support Center: https://dea78799-dotcom.github.io/SYNTRA-Website/support/
 
 Community: https://dea78799-dotcom.github.io/SYNTRA-Website/community/
+
+## v2.4 — Homepage visual refresh
+
+- Rebuilt the homepage hero into a responsive editorial layout with clearer SYNTRA positioning and a focused visual identity.
+- Improved desktop project discovery with a three-column product grid, refined card hierarchy and restrained gold detailing.
+- Added a compact research / engineering / improvement strip and clearer ecosystem messaging.
+- Preserved mobile navigation, keyboard focus visibility, reduced-motion support, existing product routes and official contact details.
+- Verified all nine referenced local product, support, documentation, update, download and brand-mark paths exist in the repository.
 
 ## v2.3 — Latest product version synchronization
 
