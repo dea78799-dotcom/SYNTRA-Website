@@ -11,7 +11,7 @@
   <meta property="og:title" content="SYNTRA GROUP — Innovation · Technology · Future">
   <meta property="og:description" content="Tự nghiên cứu. Tự phát triển. Tự làm chủ công nghệ. Khám phá SYNTRA OS và SYNTRA FILES.">
   <meta property="og:url" content="https://dea78799-dotcom.github.io/SYNTRA-Website/">
-  <meta property="og:image" content="https://dea78799-dotcom.github.io/SYNTRA-Website/assets/syntra-mark.svg">
+  <meta property="og:image" content="https://raw.githubusercontent.com/dea78799-dotcom/Hinh-anh/main/file_0000000076408209a2b7b2c33b416b28.png">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="SYNTRA GROUP">
   <meta name="twitter:description" content="Innovation · Technology · Future">
@@ -26,6 +26,8 @@
     .menu-toggle svg{width:21px;height:21px}
     .menu-toggle[aria-expanded="true"]{border-color:var(--gold);color:var(--gold2)}
     .reading-progress{position:absolute;left:0;bottom:-1px;height:2px;width:0;background:var(--gold);transition:width .08s linear}
+    .hero-logo{display:block;width:min(100%,460px);height:auto;max-height:300px;object-fit:contain;object-position:left center;margin:0 0 28px;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.24)}
+    @media(max-width:600px){.hero-logo{width:min(100%,360px);max-height:230px;margin-bottom:22px}}
     .hero{position:relative;overflow:hidden}
     .hero:after{content:"";position:absolute;width:420px;height:420px;right:-160px;top:30px;border:1px solid rgba(216,181,109,.10);border-radius:50%;box-shadow:0 0 0 36px rgba(216,181,109,.025),0 0 0 72px rgba(216,181,109,.018);pointer-events:none}
     .hero .wrap{position:relative;z-index:1}
@@ -109,18 +111,19 @@
       <nav id="main-nav" aria-label="Điều hướng chính">
         <a href="#about">Giới thiệu</a>
         <a href="#products">Sản phẩm</a>
-        <a href="projects/">Sản phẩm</a>
         <a href="updates/">Cập nhật</a>
         <a href="downloads/">Download Center</a>
         <a href="docs/">Tài liệu</a>
         <a href="support/">Hỗ trợ</a>
         <a class="nav-cta" href="mailto:vanhuong05042025@gmail.com">Liên hệ</a>
-      <a href="community/">Cộng đồng</a></nav>
+        <a href="community/">Cộng đồng</a>
+      </nav>
     </div>
   </header>
   <main id="main-content" tabindex="-1">
     <section class="hero" id="home" style="border-top:0">
       <div class="wrap hero-inner">
+        <img class="hero-logo" src="https://raw.githubusercontent.com/dea78799-dotcom/Hinh-anh/main/file_0000000076408209a2b7b2c33b416b28.png" alt="SYNTRA GROUP — Innovation, Technology, Future" width="768" height="512" fetchpriority="high">
         <div class="eyebrow">Innovation · Technology · Future</div>
         <h1>Building<br><span>what's next.</span></h1>
         <p class="lead">SYNTRA là định hướng phát triển công nghệ tập trung vào nghiên cứu, xây dựng và hoàn thiện các sản phẩm phần mềm của riêng mình.</p>
@@ -174,19 +177,7 @@
     </section>
 
 
-    <section id="product-center">
-      <div class="wrap">
-        <div class="eyebrow">Product Center</div>
-        <div class="section-head">
-          <h2>The SYNTRA project dashboard</h2>
-          <p class="section-desc">Theo dõi trạng thái dự án, phiên bản repository và lộ trình phát triển tại một nơi.</p>
-        </div>
-        <div class="download">
-          <div><h3>SYNTRA Product Center</h3><p>Tổng quan SYNTRA OS, SYNTRA FILES và các giai đoạn phát triển.</p></div>
-          <a class="button primary" href="projects/">Mở Product Center →</a>
-        </div>
-      </div>
-    </section>
+
 
     <section id="updates">
       <div class="wrap">
