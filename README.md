@@ -2,7 +2,7 @@
 
 Official website source for SYNTRA Group.
 
-Current website version: **v1.8**.
+Current website version: **v1.9**.
 
 ## Deploy with GitHub Pages
 
@@ -14,13 +14,14 @@ Current website version: **v1.8**.
 
 ## Website files
 
-- `index.html` — responsive SYNTRA landing page with accessible mobile navigation, social metadata, reading progress and latest-updates preview, project testing status, Download Center entry and Documentation Center and Support Center navigation (v1.8).
+- `index.html` — responsive SYNTRA landing page with accessible mobile navigation, social metadata, reading progress and latest-updates preview, project testing status, Download Center entry and Documentation Center, Support Center and Community navigation (v1.9).
 - `products/syntra-os.html` — product overview for SYNTRA OS.
 - `products/syntra-files.html` — product overview for SYNTRA FILES.
 - `updates/index.html` — version history and project update notes for SYNTRA OS and SYNTRA FILES.
 - `downloads/index.html` — Download Center with release status for both projects; direct installation links remain disabled until verified official packages are published.
 - `docs/index.html` — Documentation Center linking to product, build, contribution, architecture and QEMU testing documentation in the source repositories.
 - `support/index.html` — Support Center with product FAQs, GitHub issue links, safe bug-report guidance and public contact information.
+- `community/index.html` — SYNTRA Community page with the Discord invite and user-provided QR image.
 - `assets/syntra-files-logo.svg` — SYNTRA FILES product logo.
 - `assets/syntra-mark.svg` — shared SYNTRA brand mark and favicon.
 - Product source repositories:
@@ -34,3 +35,5 @@ SYNTRA FILES is currently in testing and upgrade (latest repository README check
 Public contact: vanhuong05042025@gmail.com
 
 Support Center: https://dea78799-dotcom.github.io/SYNTRA-Website/support/
+
+Community: https://dea78799-dotcom.github.io/SYNTRA-Website/community/
