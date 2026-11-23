@@ -16,7 +16,7 @@ Current website version: **v2.1**.
 
 - `index.html` — responsive SYNTRA landing page with accessible mobile navigation, social metadata, reading progress and latest-updates preview, project testing status, Download Center entry and Documentation Center, Support Center and Community navigation (v1.9; retained in v2.0).
 - `products/syntra-os.html` — product overview for SYNTRA OS.
-- `products/syntra-files.html` — product overview for SYNTRA FILES (v0.71.0; testing and upgrade).
+- `products/syntra-files.html` — product overview for SYNTRA FILES (v0.73.0; testing and upgrade).
 - `products/syntra-social.html` — product overview for SYNTRA SOCIAL (Prototype 1.0; local-only prototype).
 - `updates/index.html` — version history and project update notes for SYNTRA OS and SYNTRA FILES.
 - `downloads/index.html` — Download Center with release status and a five-step release verification standard; direct installation links remain disabled until verified official packages are published (v2.0).
@@ -32,13 +32,19 @@ Current website version: **v2.1**.
 
 ## APK publishing
 
-SYNTRA FILES is currently in testing and upgrade (latest repository README checked for this website update: v0.71.0). SYNTRA SOCIAL is Prototype 1.0; its content and media remain local to the current browser, with no real accounts or backend yet. The Download Center intentionally keeps APK installation disabled until a real official package has been built and checked. SYNTRA OS has no end-user installer confirmed. Never present a CI artifact or source-code ZIP as a ready-to-install release.
+SYNTRA FILES is currently in testing and upgrade (latest repository README checked for this website update: v0.73.0). SYNTRA SOCIAL is Prototype 1.0; its content and media remain local to the current browser, with no real accounts or backend yet. The Download Center intentionally keeps APK installation disabled until a real official package has been built and checked. SYNTRA OS has no end-user installer confirmed. Never present a CI artifact or source-code ZIP as a ready-to-install release.
 
 Public contact: vanhuong05042025@gmail.com
 
 Support Center: https://dea78799-dotcom.github.io/SYNTRA-Website/support/
 
 Community: https://dea78799-dotcom.github.io/SYNTRA-Website/community/
+
+## v2.2 — SYNTRA FILES v0.73.0 synchronization
+
+- Updated the homepage latest-update panel and SYNTRA FILES product page to v0.73.0.
+- Added v0.73.0 image-preview controls and v0.72.0 text-preview status-strip entries to the changelog.
+- Kept the product status as early development and testing; no verified public APK release is claimed.
 
 ## v2.1 — Product version synchronization
 
