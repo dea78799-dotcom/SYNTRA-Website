@@ -2,7 +2,7 @@
 
 Official website source for SYNTRA Group.
 
-Current website version: **v2.4**.
+Current website version: **v2.5**.
 
 ## Deploy with GitHub Pages
 
@@ -14,6 +14,7 @@ Current website version: **v2.4**.
 
 ## Website files
 
+- `about/index.html` — SYNTRA GROUP introduction, mission, development principles and ecosystem overview.
 - `index.html` — responsive SYNTRA landing page with accessible mobile navigation, social metadata, reading progress and latest-updates preview, project testing status, Download Center entry and Documentation Center, Support Center and Community navigation (v1.9; retained in v2.0).
 - `products/syntra-os.html` — product overview for SYNTRA OS.
 - `products/syntra-files.html` — product overview for SYNTRA FILES (v0.75.0; testing and upgrade).
@@ -39,6 +40,14 @@ Public contact: vanhuong05042025@gmail.com
 Support Center: https://dea78799-dotcom.github.io/SYNTRA-Website/support/
 
 Community: https://dea78799-dotcom.github.io/SYNTRA-Website/community/
+
+## v2.5 — SYNTRA GROUP introduction page
+
+- Added a dedicated About page describing SYNTRA's direction, mission and development principles.
+- Added a clearly labeled ecosystem overview for SYNTRA OS, SYNTRA FILES, SYNTRA SOCIAL and SYNTRA NEXUS, with project states distinguished.
+- Linked the homepage navigation to the new About page.
+- Added responsive navigation, keyboard-accessible skip link, reduced-motion support and social metadata.
+- Kept public contact details limited to the designated public email address.
 
 ## v2.4 — Homepage visual refresh
 
