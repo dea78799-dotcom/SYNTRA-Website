@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#101010">
-<meta name="description" content="Lịch sử phiên bản và cập nhật phát triển của SYNTRA OS và SYNTRA FILES.">
+<meta name="description" content="Lịch sử phiên bản và cập nhật phát triển của SYNTRA OS, SYNTRA FILES và SYNTRA SOCIAL.">
 <meta name="author" content="SYNTRA GROUP">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Updates | SYNTRA GROUP">
@@ -64,17 +64,17 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 <h1>Updates<br><span>Progress in motion.</span></h1>
 <p class="lead">Lịch sử phiên bản và các thay đổi được ghi nhận từ README của từng repository. Nội dung sẽ được bổ sung khi dự án có bản cập nhật mới.</p>
 <div class="filters" aria-label="Lọc theo dự án">
-<a href="#syntra-files">SYNTRA FILES</a><a href="#syntra-os">SYNTRA OS</a>
+<a href="#syntra-files">SYNTRA FILES</a><a href="#syntra-os">SYNTRA OS</a><a href="#syntra-social">SYNTRA SOCIAL</a>
 </div>
 
 <section class="group" id="syntra-files">
 <div class="group-head"><h2>SYNTRA FILES</h2><p>Android file manager · Kotlin · Jetpack Compose</p></div>
 <div class="timeline">
 <article class="entry">
-<div class="entry-top"><span class="version">v0.40.0 · Latest recorded</span><span class="product">SYNTRA FILES</span></div>
-<h3>Storage analysis dashboard</h3>
-<p>Nâng cấp tổng quan lưu trữ thành bảng phân tích thân thiện với màn hình điện thoại.</p>
-<ul><li>Hiển thị thanh phân bổ dung lượng theo nhóm ảnh, video, âm thanh, tài liệu, tệp nén và nhóm khác.</li><li>Bổ sung tổng dung lượng, số lượng mục đã quét và danh sách 10 tệp có dung lượng lớn nhất.</li><li>Giới hạn phân tích trong cây thư mục người dùng đã chọn và giữ giới hạn an toàn 50.000 mục.</li></ul>
+<div class="entry-top"><span class="version">v0.71.0 · Latest recorded</span><span class="product">SYNTRA FILES</span></div>
+<h3>Compact file-list refinement</h3>
+<p>Tinh chỉnh danh sách tệp để hiển thị nhiều nội dung hơn trên màn hình điện thoại.</p>
+<ul><li>Thu gọn hàng tệp, giảm kích thước ô biểu tượng và khoảng cách dọc.</li><li>Thay huy hiệu metadata bằng một dòng tóm tắt loại tệp, dung lượng và thời gian sửa đổi; thư mục hiển thị thời gian sửa đổi.</li><li>Giữ nguyên thao tác mở tệp, chọn mục, yêu thích và menu hành động.</li><li>Đồng bộ phiên bản ứng dụng, nhãn APK CI và tài liệu.</li></ul>
 </article>
 <article class="entry">
 <div class="entry-top"><span class="version">v0.39.0</span><span class="product">SYNTRA FILES</span></div>
@@ -145,6 +145,18 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 <h3>Early development baseline</h3>
 <p>Phiên bản nền tảng được mô tả trong README của repository.</p>
 <ul><li>Định hướng hệ điều hành di động độc lập với Custom Microkernel.</li><li>Mục tiêu kiến trúc ARM64, x86_64 và RISC-V; ngôn ngữ chính C, Rust và Assembly.</li><li>README ghi nhận quy trình CI kiểm tra kernel ARM64 trong QEMU và xuất ELF thành workflow artifact.</li><li>Các thành phần kiến trúc được định hướng gồm bootloader, kernel, quản lý bộ nhớ, tiến trình, IPC, driver, dịch vụ hệ thống, runtime ứng dụng, giao diện và bảo mật.</li></ul>
+</article>
+</div>
+</section>
+
+<section class="group" id="syntra-social">
+<div class="group-head"><h2>SYNTRA SOCIAL</h2><p>Social platform · Mobile-first web prototype</p></div>
+<div class="timeline">
+<article class="entry">
+<div class="entry-top"><span class="version">Prototype 1.0 · Latest recorded</span><span class="product">SYNTRA SOCIAL</span></div>
+<h3>Redesigned interface, Explore and multi-photo albums</h3>
+<p>Nâng cấp giao diện prototype và bổ sung trải nghiệm khám phá nội dung cục bộ.</p>
+<ul><li>Chuẩn hóa giao diện mobile-first theo nhận diện SYNTRA hiện tại.</li><li>Bổ sung trang Khám phá, tìm kiếm dữ liệu demo và truy vấn tiếng Việt không phân biệt dấu.</li><li>Hỗ trợ album tối đa 8 ảnh trong một bài viết demo, kèm trình xem ảnh nhiều mục.</li><li>Dữ liệu và media vẫn lưu cục bộ trong trình duyệt; chưa có tài khoản thật, backend hoặc đồng bộ giữa thiết bị.</li></ul>
 </article>
 </div>
 </section>
