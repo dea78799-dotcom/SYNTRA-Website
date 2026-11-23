@@ -2,7 +2,7 @@
 
 Official website source for SYNTRA Group.
 
-Current website version: **v1.9**.
+Current website version: **v2.0**.
 
 ## Deploy with GitHub Pages
 
@@ -14,11 +14,11 @@ Current website version: **v1.9**.
 
 ## Website files
 
-- `index.html` — responsive SYNTRA landing page with accessible mobile navigation, social metadata, reading progress and latest-updates preview, project testing status, Download Center entry and Documentation Center, Support Center and Community navigation (v1.9).
+- `index.html` — responsive SYNTRA landing page with accessible mobile navigation, social metadata, reading progress and latest-updates preview, project testing status, Download Center entry and Documentation Center, Support Center and Community navigation (v1.9; retained in v2.0).
 - `products/syntra-os.html` — product overview for SYNTRA OS.
 - `products/syntra-files.html` — product overview for SYNTRA FILES.
 - `updates/index.html` — version history and project update notes for SYNTRA OS and SYNTRA FILES.
-- `downloads/index.html` — Download Center with release status for both projects; direct installation links remain disabled until verified official packages are published.
+- `downloads/index.html` — Download Center with release status and a five-step release verification standard; direct installation links remain disabled until verified official packages are published (v2.0).
 - `docs/index.html` — Documentation Center linking to product, build, contribution, architecture and QEMU testing documentation in the source repositories.
 - `support/index.html` — Support Center with product FAQs, GitHub issue links, safe bug-report guidance and public contact information.
 - `community/index.html` — SYNTRA Community page with the Discord invite and user-provided QR image.
@@ -37,3 +37,9 @@ Public contact: vanhuong05042025@gmail.com
 Support Center: https://dea78799-dotcom.github.io/SYNTRA-Website/support/
 
 Community: https://dea78799-dotcom.github.io/SYNTRA-Website/community/
+
+## v2.0 — Download Center release verification
+
+- Added a five-step release verification standard covering official source, product/version/architecture identity, package integrity, release notes and SHA-256.
+- Kept direct APK and OS installer actions disabled because no verified end-user package is currently confirmed.
+- SYNTRA FILES remains in testing and upgrade.
