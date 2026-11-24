@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; form-action 'self'; script-src 'self' 'sha256-x3NwXSSCVYM7sC1DGdpVwP9c28cVpxRcRk7mcyhHF1I='; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://raw.githubusercontent.com; font-src 'self' data:; connect-src 'self'; media-src 'self'; upgrade-insecure-requests">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; form-action 'self'; script-src 'self' 'sha256-x3NwXSSCVYM7sC1DGdpVwP9c28cVpxRcRk7mcyhHF1I='; style-src 'self'; img-src 'self' data: https://raw.githubusercontent.com; font-src 'self' data:; connect-src 'self'; media-src 'self'; upgrade-insecure-requests">
   <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="theme-color" content="#101010">
   <link rel="icon" type="image/svg+xml" href="assets/syntra-mark.svg">
@@ -21,238 +21,7 @@
 <meta name="twitter:description" content="Tự nghiên cứu, tự phát triển và làm chủ công nghệ với SYNTRA OS, SYNTRA FILES và SYNTRA SOCIAL.">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/dea78799-dotcom/Hinh-anh/main/file_0000000076408209a2b7b2c33b416b28.png">
 <title>SYNTRA — Innovation • Technology • Future</title>
-  <style>
-    :root{color-scheme:dark;--bg:#0b0b0c;--panel:#141415;--panel2:#1b1b1d;--gold:#d8b56d;--gold2:#f0d59a;--text:#f4f1e9;--muted:#aaa69d;--line:#302c24;--max:1120px}
-    *{box-sizing:border-box}
-    .skip-link{position:absolute;left:12px;top:-60px;z-index:30;padding:10px 14px;background:var(--gold);color:#111;border-radius:6px;font-weight:700}
-    .skip-link:focus{top:12px}
-    :focus-visible{outline:2px solid var(--gold2);outline-offset:4px}
-    .menu-toggle{display:none;width:42px;height:42px;border:1px solid var(--line);border-radius:8px;background:transparent;color:var(--text);align-items:center;justify-content:center;cursor:pointer}
-    .menu-toggle svg{width:21px;height:21px}
-    .menu-toggle[aria-expanded="true"]{border-color:var(--gold);color:var(--gold2)}
-    .reading-progress{position:absolute;left:0;bottom:-1px;height:2px;width:0;background:var(--gold);transition:width .08s linear}
-    .hero-logo{display:block;width:min(100%,460px);height:auto;max-height:300px;object-fit:contain;object-position:left center;margin:0 0 28px;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.24)}
-    @media(max-width:600px){.hero-logo{width:min(100%,360px);max-height:230px;margin-bottom:22px}}
-    .hero{position:relative;overflow:hidden}
-    .hero:after{content:"";position:absolute;width:420px;height:420px;right:-160px;top:30px;border:1px solid rgba(216,181,109,.10);border-radius:50%;box-shadow:0 0 0 36px rgba(216,181,109,.025),0 0 0 72px rgba(216,181,109,.018);pointer-events:none}
-    .hero .wrap{position:relative;z-index:1}
-    html{scroll-behavior:smooth}
-    body{margin:0;background:radial-gradient(ellipse at 80% 0%,rgba(216,181,109,.10),transparent 34%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6}
-    a{color:inherit;text-decoration:none}
-    .wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
-    header{position:sticky;top:0;z-index:10;background:rgba(11,11,12,.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(216,181,109,.15)}
-    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.18em}
-    .mark{width:42px;height:42px;display:block;flex:0 0 auto;transition:transform .35s ease}.brand:hover .mark{transform:rotate(8deg) scale(1.04)}
-    .brand span:last-child{font-size:15px}
-    .brand-word{display:flex;flex-direction:column;line-height:1.1;gap:4px}
-    .brand-word small{font-size:8px;letter-spacing:.19em;color:var(--muted);font-weight:600}
-    .hero-inner{animation:hero-enter .8s ease both}
-    @keyframes hero-enter{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
-    .card{transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
-    .card:hover{transform:translateY(-5px);border-color:#80683e;box-shadow:0 14px 36px rgba(0,0,0,.22)}
-    .product-icon svg{width:25px;height:25px;display:block}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
-    nav{display:flex;align-items:center;gap:26px;color:var(--muted);font-size:13px}
-    nav a:hover,.text-link:hover{color:var(--gold2)}
-    .nav-cta,.button{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--gold);border-radius:7px;padding:10px 16px;color:var(--gold2);font-size:13px;font-weight:700;transition:.2s}
-    .nav-cta:hover,.button:hover{background:var(--gold);color:#111}
-    .hero{padding:88px 0 48px;min-height:0;display:block}.hero-layout{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(300px,.85fr);align-items:center;gap:44px}.hero-copy{position:relative;z-index:2}.hero-visual{position:relative;min-height:350px;display:flex;align-items:center;justify-content:center;padding:22px}.hero-logo{position:relative;z-index:1;width:min(100%,460px);max-height:310px;object-fit:contain;object-position:center;margin:0;border:1px solid rgba(216,181,109,.2);box-shadow:0 30px 90px rgba(0,0,0,.42)}.hero-orbit{position:absolute;border:1px solid rgba(216,181,109,.15);border-radius:50%;aspect-ratio:1;pointer-events:none}.orbit-one{width:92%;}.orbit-two{width:112%;border-style:dashed;opacity:.45}.hero-visual-caption{position:absolute;z-index:2;left:10%;right:10%;bottom:4px;display:flex;align-items:center;gap:9px;padding:11px 13px;background:rgba(12,12,13,.86);border:1px solid rgba(216,181,109,.18);border-radius:7px;color:#b9b1a2;font-size:9px;letter-spacing:.14em}.caption-dot{width:6px;height:6px;background:var(--gold);border-radius:50%;box-shadow:0 0 12px var(--gold)}.caption-index{margin-left:auto;color:var(--gold2)}.eyebrow{display:flex;align-items:center;gap:10px}.eyebrow-line{width:24px;height:1px;background:var(--gold)}.hero-bottomline{display:flex;justify-content:space-between;gap:16px;margin-top:42px;padding:17px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);color:#77736b;font-size:9px;letter-spacing:.17em}
-    .eyebrow{color:var(--gold);font-size:11px;font-weight:800;letter-spacing:.28em;text-transform:uppercase}
-    h1{font-size:clamp(46px,8vw,88px);line-height:1.02;letter-spacing:-.055em;margin:22px 0 20px;font-weight:750}
-    h1 span{color:var(--gold)}
-    .lead{max-width:650px;color:#c1bdb4;font-size:clamp(15px,2vw,18px)}
-    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
-    .button.primary{background:var(--gold);color:#111}
-    .button.primary:hover{background:var(--gold2)}
-    .hero-note{margin-top:54px;color:#77736b;font-size:11px;letter-spacing:.16em}
-    section{padding:76px 0;border-top:1px solid rgba(216,181,109,.12)}
-    .section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:30px}
-    h2{font-size:clamp(28px,4vw,42px);letter-spacing:-.035em;margin:8px 0 0}
-    .section-desc{max-width:430px;color:var(--muted);font-size:14px}
-    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-    .card{background:linear-gradient(145deg,rgba(30,29,26,.96),rgba(17,17,18,.98));border:1px solid var(--line);border-radius:13px;padding:26px;min-height:280px;display:flex;flex-direction:column;position:relative;overflow:hidden}.card:before{content:"";position:absolute;inset:0 0 auto;height:1px;background:linear-gradient(90deg,transparent,rgba(216,181,109,.55),transparent);opacity:.6}.card h3{letter-spacing:-.035em}.card .text-link{display:inline-flex;align-items:center;gap:6px;width:fit-content;padding-top:7px}
-    .card-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
-    .product-icon{width:48px;height:48px;border:1px solid #6c5937;border-radius:12px;display:grid;place-items:center;color:var(--gold);font-size:22px}
-    .status{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);border:1px solid #5a492e;border-radius:30px;padding:5px 9px}
-    h3{font-size:25px;margin:22px 0 8px}
-    .card p{color:var(--muted);font-size:14px;margin:0 0 22px;max-width:470px}
-    .card .text-link{margin-top:auto;color:var(--gold2);font-size:13px;font-weight:700}
-    .download{background:linear-gradient(120deg,#191713,#111);border:1px solid #51432b;border-radius:14px;padding:30px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .download h3{margin:0 0 8px}
-    .download p{margin:0;color:var(--muted);font-size:14px}
-    .disabled{opacity:.5;cursor:not-allowed;pointer-events:none}
-    .principles{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .principle{padding:22px 0;border-top:1px solid var(--line)}
-    .principle b{display:block;color:var(--gold2);font-size:15px;margin-bottom:6px}
-    .principle span{color:var(--muted);font-size:13px}
-    footer{padding:32px 0 42px;border-top:1px solid rgba(216,181,109,.15);color:var(--muted);font-size:12px}
-    .footer-row{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
-    .footer-brand{color:var(--text);font-weight:800;letter-spacing:.16em}
-    @media(max-width:700px){
-      .wrap{width:min(100% - 30px,var(--max))}.nav{height:66px}
-      .menu-toggle{display:inline-flex}
-      nav{display:none;position:absolute;top:calc(100% + 1px);left:0;right:0;padding:14px 20px 18px;background:#111;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:4px}
-      nav.open{display:flex}
-      nav a{padding:11px 8px}
-      nav a:not(.nav-cta){display:block}
-      nav .nav-cta{margin-top:6px}
-      .hero{padding:62px 0 34px;min-height:0}.hero:after{width:250px;height:250px;right:-170px;top:30px}.hero-layout{grid-template-columns:1fr;gap:26px}.hero-copy{order:1}.hero-visual{order:0;min-height:230px;max-width:520px;width:100%;margin:auto;padding:8px 18px 24px}.hero-logo{width:min(100%,330px);max-height:210px}.hero-visual-caption{bottom:0;left:12%;right:12%;font-size:8px}.hero-bottomline{margin-top:24px;font-size:8px;letter-spacing:.08em;gap:8px}.hero-note{margin-top:32px}
-      .section-head{display:block}.section-desc{margin-top:12px}.grid{grid-template-columns:1fr}.card{min-height:220px}
-      .download{align-items:flex-start;flex-direction:column}.principles{grid-template-columns:1fr;gap:8px}section{padding:58px 0}
-    }
-    @media(min-width:701px){.menu-toggle{display:none!important}nav{display:flex!important}}
-  
-/* SYNTRA responsive refinement */
-img,svg,video{max-width:100%}
-button,a{-webkit-tap-highlight-color:transparent}
-main{min-width:0}
-@media(min-width:701px) and (max-width:1050px){
-  .wrap{width:min(var(--max,1120px),calc(100% - 48px))}
-  nav,.navlinks{gap:clamp(10px,1.6vw,20px)}
-  .hero-layout{gap:28px}
-  .grid{gap:14px}
-}
-@media(max-width:700px){
-  .wrap{width:calc(100% - 32px)}
-  h1{overflow-wrap:anywhere}
-  .lead{font-size:15px}
-  .section-head{align-items:flex-start}
-  .actions,.hero-actions{width:100%}
-  .actions .button,.hero-actions .button{min-height:44px}
-  .card,.panel,.announcement{min-width:0}
-  footer .wrap,footer .footer-inner{align-items:flex-start}
-}
-@media(max-width:380px){
-  .wrap{width:calc(100% - 24px)}
-  .brand{letter-spacing:.1em}
-  .brand img,.mark{width:34px;height:34px}
-  h1{font-size:clamp(36px,12vw,48px)}
-  .button{padding:10px 12px;font-size:12px}
-}
-
-/* v2.11 — refined visual system */
-:root{
-  --gold-soft:rgba(216,181,109,.16);
-  --surface-shadow:0 24px 70px rgba(0,0,0,.28);
-}
-body{
-  background:
-    radial-gradient(ellipse at 12% 28%,rgba(216,181,109,.055),transparent 30%),
-    radial-gradient(ellipse at 88% 62%,rgba(216,181,109,.045),transparent 34%),
-    var(--bg);
-}
-header{
-  background:rgba(11,11,12,.82);
-  -webkit-backdrop-filter:blur(18px);
-  backdrop-filter:blur(18px);
-  box-shadow:0 8px 30px rgba(0,0,0,.12);
-}
-.nav{min-width:0}
-nav a:not(.nav-cta){
-  position:relative;
-  transition:color .2s ease;
-}
-nav a:not(.nav-cta)::after{
-  content:"";
-  position:absolute;
-  left:8px;right:8px;bottom:5px;
-  height:1px;
-  background:var(--gold);
-  transform:scaleX(0);
-  transform-origin:left;
-  transition:transform .22s ease;
-}
-nav a:not(.nav-cta):hover::after{transform:scaleX(1)}
-.nav-cta,.button{
-  min-height:42px;
-  box-shadow:0 5px 18px rgba(0,0,0,.12);
-}
-.hero{isolation:isolate}
-.hero:before{
-  content:"";
-  position:absolute;
-  inset:0;
-  z-index:-1;
-  opacity:.22;
-  pointer-events:none;
-  background-image:linear-gradient(rgba(216,181,109,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(216,181,109,.055) 1px,transparent 1px);
-  background-size:56px 56px;
-  mask-image:linear-gradient(to bottom,black,transparent 82%);
-}
-.hero-visual{filter:drop-shadow(0 22px 44px rgba(0,0,0,.18))}
-.hero-logo{
-  border-color:rgba(216,181,109,.28);
-  border-radius:16px;
-  box-shadow:0 28px 80px rgba(0,0,0,.48),0 0 0 7px rgba(216,181,109,.025);
-}
-.hero-visual-caption{
-  -webkit-backdrop-filter:blur(12px);
-  backdrop-filter:blur(12px);
-}
-.hero-bottomline{
-  color:#918a7c;
-  letter-spacing:.2em;
-}
-section:not(.hero){scroll-margin-top:88px}
-.section-head{align-items:flex-end}
-.section-head h2{max-width:680px}
-.section-desc{line-height:1.8}
-.card{
-  border-radius:16px;
-  padding:28px;
-  background:linear-gradient(145deg,rgba(34,32,28,.94),rgba(17,17,18,.98));
-  box-shadow:0 12px 34px rgba(0,0,0,.12);
-}
-.card:after{
-  content:"";
-  position:absolute;
-  width:150px;height:150px;
-  right:-90px;bottom:-100px;
-  border:1px solid rgba(216,181,109,.12);
-  border-radius:50%;
-  box-shadow:0 0 0 18px rgba(216,181,109,.018),0 0 0 38px rgba(216,181,109,.012);
-  pointer-events:none;
-}
-.product-icon{
-  background:linear-gradient(145deg,rgba(216,181,109,.12),rgba(216,181,109,.025));
-  box-shadow:inset 0 1px rgba(255,255,255,.06);
-}
-.status{background:rgba(216,181,109,.045)}
-.download{
-  position:relative;
-  overflow:hidden;
-  border-radius:16px;
-  box-shadow:var(--surface-shadow);
-}
-.download:before{
-  content:"";
-  position:absolute;
-  top:0;left:0;bottom:0;
-  width:3px;
-  background:linear-gradient(180deg,var(--gold2),rgba(216,181,109,.12));
-}
-.principle{transition:border-color .2s ease,transform .2s ease}
-.principle:hover{border-color:var(--gold);transform:translateY(-2px)}
-footer{background:linear-gradient(180deg,transparent,rgba(216,181,109,.025))}
-:focus-visible{outline-offset:4px}
-@media(max-width:700px){
-  header{background:rgba(11,11,12,.94)}
-  nav{border:1px solid rgba(216,181,109,.16);border-radius:0 0 12px 12px;box-shadow:0 20px 40px rgba(0,0,0,.38)}
-  nav a:not(.nav-cta)::after{display:none}
-  .hero:before{background-size:38px 38px;opacity:.15}
-  .hero-visual{filter:none}
-  .hero-logo{border-radius:12px}
-  .hero-bottomline{letter-spacing:.08em;flex-wrap:wrap}
-  .card{padding:23px}
-  .download{padding:24px}
-  .hero-actions .button{flex:1 1 190px}
-}
-@media(hover:none){
-  .card:hover,.principle:hover{transform:none;box-shadow:none}
-}
-
-</style>
+  <link rel="stylesheet" href="assets/css/pages/home.css">
 <link rel="preconnect" href="https://raw.githubusercontent.com" crossorigin>
 </head>
 <body>
@@ -278,7 +47,7 @@ footer{background:linear-gradient(180deg,transparent,rgba(216,181,109,.025))}
     </div>
   </header>
   <main id="main-content" tabindex="-1">
-    <section class="hero" id="home" style="border-top:0">
+    <section class="hero" id="home">
       <div class="wrap hero-inner">
         <div class="hero-layout">
           <div class="hero-copy">
@@ -407,7 +176,7 @@ footer{background:linear-gradient(180deg,transparent,rgba(216,181,109,.025))}
   </main>
   <footer>
     <div class="wrap footer-row">
-      <div><div class="footer-brand" style="display:flex;align-items:center;gap:10px"><img decoding="async" src="assets/syntra-mark.svg" alt="" width="30" height="30">SYNTRA GROUP</div><div>INNOVATION · TECHNOLOGY · FUTURE</div></div>
+      <div><div class="footer-brand"><img decoding="async" src="assets/syntra-mark.svg" alt="" width="30" height="30">SYNTRA GROUP</div><div>INNOVATION · TECHNOLOGY · FUTURE</div></div>
       <a class="text-link" href="mailto:vanhuong05042025@gmail.com">vanhuong05042025@gmail.com</a>
       <div>© <span id="year"></span> SYNTRA. All rights reserved.</div>
     </div>
