@@ -12,11 +12,11 @@ ROOT = Path(__file__).resolve().parents[1]
 TEXT_SUFFIXES = {".html", ".htm", ".js", ".css", ".json", ".md", ".svg", ".xml", ".txt", ".yml", ".yaml"}
 SECRET_PATTERNS = [
     re.compile(r"-----BEGIN (?:RSA |OPENSSH |EC |DSA )?PRIVATE KEY-----"),
-    re.compile(r"\\bgh[pousr]_[A-Za-z0-9]{30,}\\b"),
-    re.compile(r"\\bgithub_pat_[A-Za-z0-9_]{20,}\\b"),
-    re.compile(r"\\bAKIA[0-9A-Z]{16}\\b"),
-    re.compile(r"\\bxox[baprs]-[0-9A-Za-z-]{10,}\\b"),
-    re.compile(r"\\bAIza[0-9A-Za-z_-]{30,}\\b"),
+    re.compile(r"\bgh[pousr]_[A-Za-z0-9]{30,}\b"),
+    re.compile(r"\bgithub_pat_[A-Za-z0-9_]{20,}\b"),
+    re.compile(r"\bAKIA[0-9A-Z]{16}\b"),
+    re.compile(r"\bxox[baprs]-[0-9A-Za-z-]{10,}\b"),
+    re.compile(r"\bAIza[0-9A-Za-z_-]{30,}\b"),
     re.compile(r"-----BEGIN PGP PRIVATE KEY BLOCK-----"),
 ]
 
@@ -110,7 +110,7 @@ for page in html_pages:
     if not parser.csp:
         errors.append(f"Missing CSP meta policy: {relative}")
     else:
-        script_directive = re.search(r"(?:^|;)\\s*script-src\\s+([^;]+)", parser.csp, re.IGNORECASE)
+        script_directive = re.search(r"(?:^|;)\s*script-src\s+([^;]+)", parser.csp, re.IGNORECASE)
         if not script_directive:
             errors.append(f"Missing explicit script-src directive: {relative}")
         else:
@@ -141,6 +141,6 @@ for page, parser in parsed.items():
 
 if errors:
     print("SYNTRA security baseline: FAILED")
-    print("\\n".join(f"- {item}" for item in errors))
+    print("\n".join(f"- {item}" for item in errors))
     sys.exit(1)
 print(f"SYNTRA security baseline: PASS ({len(html_pages)} HTML pages, {len(files)} text files checked)")
