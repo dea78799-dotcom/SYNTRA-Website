@@ -30,6 +30,8 @@ class PageParser(HTMLParser):
         self.referrer = False
         self.inline_scripts = []
         self.inline_event_handlers = []
+        self.inline_style_blocks = 0
+        self.inline_style_attributes = []
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
@@ -47,6 +49,10 @@ class PageParser(HTMLParser):
         for name in attrs:
             if re.fullmatch(r"on[a-z]+", name, re.IGNORECASE):
                 self.inline_event_handlers.append(name)
+        if "style" in attrs:
+            self.inline_style_attributes.append(attrs["style"])
+        if tag == "style":
+            self.inline_style_blocks += 1
         if tag == "script":
             script_type = attrs.get("type", "").strip().lower()
             is_javascript = script_type in ("", "module", "text/javascript", "application/javascript", "application/ecmascript", "text/ecmascript")
@@ -130,6 +136,15 @@ for page in html_pages:
                 digest = base64.b64encode(hashlib.sha256(script.encode("utf-8")).digest()).decode("ascii")
                 if f"'sha256-{digest}'" not in sources:
                     errors.append(f"Inline script SHA-256 missing from CSP: {relative} ({digest})")
+        style_directive = re.search(r"(?:^|;)\\s*style-src\\s+([^;]+)", parser.csp, re.IGNORECASE)
+        if not style_directive:
+            errors.append(f"Missing explicit style-src directive: {relative}")
+        elif "'unsafe-inline'" in style_directive.group(1).split():
+            errors.append(f"style-src allows unsafe-inline: {relative}")
+        if parser.inline_style_blocks:
+            errors.append(f"Inline style blocks found: {relative} ({parser.inline_style_blocks})")
+        if parser.inline_style_attributes:
+            errors.append(f"Inline style attributes found: {relative} ({len(parser.inline_style_attributes)})")
         if parser.inline_event_handlers:
             errors.append(f"Inline event handler attributes found: {relative}")
     if not parser.referrer:
