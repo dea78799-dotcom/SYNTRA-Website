@@ -2,7 +2,15 @@
 
 Official website source for SYNTRA Group.
 
-Current website version: **v2.10**.
+Current website version: **v2.11**.
+
+## v2.11 — Homepage visual refinement
+
+- Refined the homepage visual system with a restrained grid texture, softer ambient lighting and a more cohesive dark-and-muted-gold presentation.
+- Improved navigation hover states, translucent header treatment, product cards, icon surfaces and download panels.
+- Tuned mobile spacing and touch layouts while preserving reduced-motion behavior and existing page content.
+- Kept the public Updates page concise and excluded internal development details.
+- Preserved the existing security policy, public contact address, product links and release-status wording.
 
 ## Deploy with GitHub Pages
 
