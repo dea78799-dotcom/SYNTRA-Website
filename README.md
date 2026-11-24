@@ -2,7 +2,15 @@
 
 Official website source for SYNTRA Group.
 
-Current website version: **v2.12**.\n\n## v2.12 — Public Changelog\n\n- Added a dedicated Changelog page with project filters and text search.\n- Summarized version notes from public project repositories and linked each entry to its source.\n- Marked undated entries as not published instead of inferring dates; separated prototypes and unreleased notes from formal releases.\n- Added Changelog navigation across the public website and listed the page in the sitemap.\n- Preserved the existing security policy, public contact address and mobile-responsive visual identity.\n
+Current website version: **v2.12**.
+
+## v2.12 — Public Changelog
+
+- Added a dedicated Changelog page with project filters and text search.
+- Summarized version notes from public project repositories and linked each entry to its source.
+- Marked undated entries as not published instead of inferring dates; separated prototypes and unreleased notes from formal releases.
+- Added Changelog navigation across the public website and listed the page in the sitemap.
+- Preserved the existing security policy, public contact address and mobile-responsive visual identity.
 
 ## v2.11 — Homepage visual refinement
 
@@ -27,7 +35,8 @@ Current website version: **v2.12**.\n\n## v2.12 — Public Changelog\n\n- Added 
 - `products/syntra-os.html` — product overview for SYNTRA OS.
 - `products/syntra-files.html` — product overview for SYNTRA FILES.
 - `products/syntra-social.html` — product overview for SYNTRA SOCIAL.
-- `changelog/index.html` — public project change history with filters, search and source links.\n- `updates/index.html` — public announcements only; internal development notes and sensitive technical details are not published here.
+- `changelog/index.html` — public project change history with filters, search and source links.\n- `changelog/index.html` — public project change history with filters, search and source links.
+- `updates/index.html` — public announcements only; internal development notes and sensitive technical details are not published here.
 - `downloads/index.html` — public Download Center showing availability and official release links; unavailable packages remain clearly marked.
 - `docs/index.html` — public-facing Documentation Center with product status and safe user guidance; internal architecture and CI details are not exposed.
 - `support/index.html` — Support Center with product FAQs, GitHub issue links, safe bug-report guidance and public contact information.
