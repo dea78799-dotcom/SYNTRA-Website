@@ -117,10 +117,19 @@ for page in html_pages:
             sources = script_directive.group(1).split()
             if "'unsafe-inline'" in sources:
                 errors.append(f"script-src allows unsafe-inline: {relative}")
-            for script in parser.inline_scripts:
+            page_content = page.read_text(encoding="utf-8")
+            script_pattern = re.compile(r"<script\\b([^>]*)>([\\s\\S]*?)</script\\s*>", re.IGNORECASE)
+            for match in script_pattern.finditer(page_content):
+                attributes, script = match.groups()
+                if re.search(r"\\bsrc\\s*=", attributes, re.IGNORECASE):
+                    continue
+                type_match = re.search(r"""\\btype\\s*=\\s*["']?([^\\s"'>]+)""", attributes, re.IGNORECASE)
+                script_type = type_match.group(1).lower() if type_match else ""
+                if script_type not in ("", "module", "text/javascript", "application/javascript", "application/ecmascript", "text/ecmascript"):
+                    continue
                 digest = base64.b64encode(hashlib.sha256(script.encode("utf-8")).digest()).decode("ascii")
                 if f"'sha256-{digest}'" not in sources:
-                    errors.append(f"Inline script SHA-256 missing from CSP: {relative}")
+                    errors.append(f"Inline script SHA-256 missing from CSP: {relative} ({digest})")
         if parser.inline_event_handlers:
             errors.append(f"Inline event handler attributes found: {relative}")
     if not parser.referrer:
