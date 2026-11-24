@@ -2,7 +2,7 @@
 
 Official website source for SYNTRA Group.
 
-Current website version: **v2.9**.
+Current website version: **v2.10**.
 
 ## Deploy with GitHub Pages
 
@@ -114,3 +114,17 @@ Community: https://dea78799-dotcom.github.io/SYNTRA-Website/community/
 - Images use asynchronous decoding; the community QR image is lazy-loaded.
 - The homepage and community page establish a preconnect hint for the external image host they use.
 - SEO metadata and local file paths were checked at source level. Browser rendering, live deployment, and real-device performance measurements still require separate testing.
+
+## Security baseline
+
+- All public HTML pages include a browser Content Security Policy (CSP) meta policy and a strict-origin referrer policy.
+- CSP allows same-origin scripts/styles, inline code currently used by the static pages, local assets, and images from the approved `raw.githubusercontent.com` host. It blocks object embeds and frames and restricts form submissions.
+- `.github/workflows/security-baseline.yml` runs read-only static checks on pushes and pull requests.
+- `scripts/security_audit.py` checks for common exposed credential patterns, missing browser policies, and broken local links/anchors.
+- Dependabot checks GitHub Actions dependencies weekly.
+- `SECURITY.md` documents private vulnerability reporting.
+- GitHub Pages does not provide configurable HTTP response headers for this repository's default `github.io` hostname. The CSP meta policy is a browser-side baseline, not a replacement for HTTP security headers or an edge WAF.
+- Cloudflare proxy/WAF cannot be placed in front of the existing shared `github.io` hostname without a custom domain. No DNS or hosting changes were made.
+- Branch protection, account 2FA, and private vulnerability reporting settings must be reviewed in GitHub Settings; the connected integration did not grant access to read or change branch protection settings.
+- Static checks do not prove resistance to DDoS, account takeover, or all application attacks. No load or penetration testing is performed.
+
