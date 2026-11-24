@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dea78799-dotcom.github.io/SYNTRA-Website/sitemap.xml
