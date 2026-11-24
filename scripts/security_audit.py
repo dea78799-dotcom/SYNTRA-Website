@@ -136,7 +136,7 @@ for page in html_pages:
                 digest = base64.b64encode(hashlib.sha256(script.encode("utf-8")).digest()).decode("ascii")
                 if f"'sha256-{digest}'" not in sources:
                     errors.append(f"Inline script SHA-256 missing from CSP: {relative} ({digest})")
-        style_directive = re.search(r"(?:^|;)\\s*style-src\\s+([^;]+)", parser.csp, re.IGNORECASE)
+        style_directive = re.search(r"(?:^|;)\s*style-src\s+([^;]+)", parser.csp, re.IGNORECASE)
         if not style_directive:
             errors.append(f"Missing explicit style-src directive: {relative}")
         elif "'unsafe-inline'" in style_directive.group(1).split():
