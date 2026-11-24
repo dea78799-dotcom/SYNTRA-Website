@@ -107,7 +107,7 @@ jobs:
           }
           with open(data_path, "w", encoding="utf-8") as output:
               json.dump(result, output, ensure_ascii=False, indent=2)
-              output.write("\\n")
+              output.write("\n")
           print(json.dumps(result, ensure_ascii=False, indent=2))
           PY
 
