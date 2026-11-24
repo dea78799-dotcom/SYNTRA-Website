@@ -65,7 +65,35 @@
     .footer-inner{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
     @media(max-width:760px){.menu-toggle{display:flex}nav{display:none;position:absolute;top:72px;left:0;right:0;padding:18px 20px 22px;background:#101011;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0}nav.open{display:flex}nav a{padding:12px 4px;border-bottom:1px solid rgba(255,255,255,.05)}nav .nav-cta{margin-top:10px;text-align:center}.hero{padding:76px 0 54px}.section{padding:58px 0}.section-head{grid-template-columns:1fr;gap:12px}.principles{grid-template-columns:1fr}.projects{grid-template-columns:1fr}.statement{padding:28px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
-  </style>
+  
+/* SYNTRA responsive refinement */
+img,svg,video{max-width:100%}
+button,a{-webkit-tap-highlight-color:transparent}
+main{min-width:0}
+@media(min-width:701px) and (max-width:1050px){
+  .wrap{width:min(var(--max,1120px),calc(100% - 48px))}
+  nav,.navlinks{gap:clamp(10px,1.6vw,20px)}
+  .hero-layout{gap:28px}
+  .grid{gap:14px}
+}
+@media(max-width:700px){
+  .wrap{width:calc(100% - 32px)}
+  h1{overflow-wrap:anywhere}
+  .lead{font-size:15px}
+  .section-head{align-items:flex-start}
+  .actions,.hero-actions{width:100%}
+  .actions .button,.hero-actions .button{min-height:44px}
+  .card,.panel,.announcement{min-width:0}
+  footer .wrap,footer .footer-inner{align-items:flex-start}
+}
+@media(max-width:380px){
+  .wrap{width:calc(100% - 24px)}
+  .brand{letter-spacing:.1em}
+  .brand img,.mark{width:34px;height:34px}
+  h1{font-size:clamp(36px,12vw,48px)}
+  .button{padding:10px 12px;font-size:12px}
+}
+</style>
 </head>
 <body>
   <a class="skip" href="#main">Bỏ qua điều hướng</a>
