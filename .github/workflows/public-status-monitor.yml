@@ -1,0 +1,92 @@
+name: SYNTRA Public Status Monitor
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: public-status-monitor
+  cancel-in-progress: true
+
+jobs:
+  check-public-pages:
+    name: Check public website endpoints
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out source
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: true
+
+      - name: Check public endpoints and update status data
+        run: |
+          python3 - <<'PY'
+          import json
+          import time
+          import urllib.error
+          import urllib.request
+          from datetime import datetime, timezone
+
+          base = "https://dea78799-dotcom.github.io/SYNTRA-Website"
+          targets = [
+              ("SYNTRA Website", "/", base + "/"),
+              ("Project Hub", "/projects/", base + "/projects/"),
+              ("Public Updates", "/updates/", base + "/updates/"),
+              ("Changelog", "/changelog/", base + "/changelog/"),
+          ]
+          checks = []
+          for name, path, url in targets:
+              started = time.monotonic()
+              code = None
+              state = "down"
+              try:
+                  request = urllib.request.Request(
+                      url,
+                      headers={"User-Agent": "SYNTRA-Public-Status-Monitor/1.0"},
+                      method="GET",
+                  )
+                  with urllib.request.urlopen(request, timeout=15) as response:
+                      code = response.status
+                      state = "up" if 200 <= code < 400 else "down"
+              except urllib.error.HTTPError as error:
+                  code = error.code
+                  state = "up" if 200 <= code < 400 else "down"
+              except Exception:
+                  state = "down"
+              elapsed = round((time.monotonic() - started) * 1000)
+              checks.append({
+                  "name": name,
+                  "path": path,
+                  "status": state,
+                  "http_status": code,
+                  "response_ms": elapsed
+              })
+
+          result = {
+              "schema_version": 1,
+              "monitoring": "active",
+              "checked_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+              "checks": checks
+          }
+          with open("status/data.json", "w", encoding="utf-8") as output:
+              json.dump(result, output, ensure_ascii=False, indent=2)
+              output.write("\n")
+          print(json.dumps(result, ensure_ascii=False, indent=2))
+          PY
+
+      - name: Commit latest public status
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add status/data.json
+          if git diff --cached --quiet; then
+            echo "Status data unchanged; no commit required."
+          else
+            git commit -m "Update public service status"
+            git push
+          fi
