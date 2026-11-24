@@ -2,13 +2,13 @@
 
 Official website source for SYNTRA Group.
 
-Current website version: **v2.13**.
+Current website version: **v2.14**.
 
-## v2.13 — Public Status Dashboard
+## v2.14 — Status Incident History
 
 - Added a public Status page with clear separation between monitored website URLs and products without public endpoints.
 - Added a scheduled GitHub Actions monitor that checks public pages every 30 minutes and updates the latest status data.
-- Documented monitoring scope and limitations; HTTP reachability is not represented as full product health.
+- Added a bounded incident history that records only status transitions and recovery events.\n- Kept monitoring scope explicit: HTTP reachability is not represented as full product health.
 - Added Status navigation and sitemap coverage while preserving public-information and security boundaries.
 
 ## v2.12 — Public Changelog
