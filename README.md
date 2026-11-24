@@ -2,7 +2,7 @@
 
 Official website source for SYNTRA Group.
 
-Current website version: **v2.7**.
+Current website version: **v2.8**.
 
 ## Deploy with GitHub Pages
 
@@ -21,7 +21,7 @@ Current website version: **v2.7**.
 - `products/syntra-social.html` — product overview for SYNTRA SOCIAL.
 - `updates/index.html` — public announcements only; internal development notes and sensitive technical details are not published here.
 - `downloads/index.html` — public Download Center showing availability and official release links; unavailable packages remain clearly marked.
-- `docs/index.html` — Documentation Center linking to public product and project documentation.
+- `docs/index.html` — public-facing Documentation Center with product status and safe user guidance; internal architecture and CI details are not exposed.
 - `support/index.html` — Support Center with product FAQs, GitHub issue links, safe bug-report guidance and public contact information.
 - `community/index.html` — SYNTRA Community page.
 - `assets/syntra-files-logo.svg` — SYNTRA FILES product logo.
@@ -40,6 +40,14 @@ Public contact: vanhuong05042025@gmail.com
 Support Center: https://dea78799-dotcom.github.io/SYNTRA-Website/support/
 
 Community: https://dea78799-dotcom.github.io/SYNTRA-Website/community/
+
+## v2.8 — Documentation privacy and mobile navigation QA
+
+- Reworked Documentation Center into a public-facing product information hub.
+- Removed direct links to internal architecture notes, CI workflows and detailed technical procedures from the public documentation page.
+- Added compact, keyboard-accessible mobile navigation to Documentation, Support and Community pages.
+- Verified navigation controls, ARIA state, responsive breakpoints, balanced HTML/CSS/JavaScript tags and absence of the private primary email across the 10 main pages.
+- Browser/device rendering and live GitHub Pages deployment still require separate visual verification.
 
 ## v2.7 — Public information and Download Center refinement
 
