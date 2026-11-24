@@ -118,12 +118,12 @@ for page in html_pages:
             if "'unsafe-inline'" in sources:
                 errors.append(f"script-src allows unsafe-inline: {relative}")
             page_content = page.read_text(encoding="utf-8")
-            script_pattern = re.compile(r"<script\\b([^>]*)>([\\s\\S]*?)</script\\s*>", re.IGNORECASE)
+            script_pattern = re.compile(r"<script\b([^>]*)>([\s\S]*?)</script\s*>", re.IGNORECASE)
             for match in script_pattern.finditer(page_content):
                 attributes, script = match.groups()
-                if re.search(r"\\bsrc\\s*=", attributes, re.IGNORECASE):
+                if re.search(r"\bsrc\s*=", attributes, re.IGNORECASE):
                     continue
-                type_match = re.search(r"""\\btype\\s*=\\s*["']?([^\\s"'>]+)""", attributes, re.IGNORECASE)
+                type_match = re.search(r"""\btype\s*=\s*["']?([^\s"'>]+)""", attributes, re.IGNORECASE)
                 script_type = type_match.group(1).lower() if type_match else ""
                 if script_type not in ("", "module", "text/javascript", "application/javascript", "application/ecmascript", "text/ecmascript"):
                     continue
