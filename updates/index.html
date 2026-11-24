@@ -23,12 +23,55 @@ main{padding:76px 0 88px}.eyebrow{color:var(--gold);font-size:11px;font-weight:8
 footer{border-top:1px solid rgba(216,181,109,.15);padding:26px 0;color:var(--muted);font-size:12px}footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 @media(max-width:650px){.wrap{width:calc(100% - 30px)}.nav{align-items:flex-start;padding:16px 0;flex-direction:column}.navlinks{gap:14px}main{padding:52px 0 66px}.announcement{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:6px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+.menu-toggle{display:none;width:42px;height:42px;flex:0 0 42px;border:1px solid var(--line);border-radius:8px;background:transparent;color:var(--text);align-items:center;justify-content:center;cursor:pointer}
+.menu-toggle svg{width:21px;height:21px}
+.menu-toggle[aria-expanded="true"]{border-color:var(--gold);color:var(--gold2)}
+@media(max-width:700px){
+ .nav{position:relative;min-height:66px;align-items:center;flex-direction:row;padding:10px 0}
+ .menu-toggle{display:flex}
+ .navlinks{display:none;position:absolute;top:calc(100% + 1px);left:0;right:0;padding:10px 16px 14px;background:#101011;border:1px solid var(--line);border-radius:0 0 10px 10px;flex-direction:column;align-items:stretch;gap:0;z-index:30;box-shadow:0 18px 40px rgba(0,0,0,.38)}
+ .navlinks.open{display:flex}
+ .navlinks a{padding:12px 5px;border-bottom:1px solid rgba(255,255,255,.06)}
+ .navlinks a:last-child{border-bottom:0}
+ main{padding-top:48px}
+}
+@media(min-width:701px){.menu-toggle{display:none!important}.navlinks{display:flex!important}}
+
+/* SYNTRA responsive refinement */
+img,svg,video{max-width:100%}
+button,a{-webkit-tap-highlight-color:transparent}
+main{min-width:0}
+@media(min-width:701px) and (max-width:1050px){
+  .wrap{width:min(var(--max,1120px),calc(100% - 48px))}
+  nav,.navlinks{gap:clamp(10px,1.6vw,20px)}
+  .hero-layout{gap:28px}
+  .grid{gap:14px}
+}
+@media(max-width:700px){
+  .wrap{width:calc(100% - 32px)}
+  h1{overflow-wrap:anywhere}
+  .lead{font-size:15px}
+  .section-head{align-items:flex-start}
+  .actions,.hero-actions{width:100%}
+  .actions .button,.hero-actions .button{min-height:44px}
+  .card,.panel,.announcement{min-width:0}
+  footer .wrap,footer .footer-inner{align-items:flex-start}
+}
+@media(max-width:380px){
+  .wrap{width:calc(100% - 24px)}
+  .brand{letter-spacing:.1em}
+  .brand img,.mark{width:34px;height:34px}
+  h1{font-size:clamp(36px,12vw,48px)}
+  .button{padding:10px 12px;font-size:12px}
+}
 </style>
 </head>
 <body>
 <header><div class="wrap nav">
 <a class="brand" href="../index.html"><img src="../assets/syntra-mark.svg" alt=""><span>SYNTRA GROUP</span></a>
-<nav class="navlinks" aria-label="Điều hướng"><a href="../index.html">Trang chủ</a><a href="../about/">Giới thiệu</a><a href="../index.html#products">Sản phẩm</a><a href="../downloads/">Tải xuống</a><a href="../docs/">Tài liệu</a><a href="../support/">Hỗ trợ</a><a href="mailto:vanhuong05042025@gmail.com">Liên hệ</a></nav>
+<button class="menu-toggle" id="menu-toggle" type="button" aria-label="Mở menu" aria-expanded="false" aria-controls="main-nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+<nav class="navlinks" id="main-nav" aria-label="Điều hướng"><a href="../index.html">Trang chủ</a><a href="../about/">Giới thiệu</a><a href="../index.html#products">Sản phẩm</a><a href="../updates/">Cập nhật</a><a href="../downloads/">Download Center</a><a href="../docs/">Tài liệu</a><a href="../support/">Hỗ trợ</a><a href="mailto:vanhuong05042025@gmail.com">Liên hệ</a><a href="../community/">Cộng đồng</a></nav>
 </div></header>
 <main class="wrap">
 <div class="eyebrow">SYNTRA GROUP / NEWSROOM</div>
@@ -45,5 +88,6 @@ footer{border-top:1px solid rgba(216,181,109,.15);padding:26px 0;color:var(--mut
 </main>
 <footer><div class="wrap"><span>SYNTRA GROUP · INNOVATION · TECHNOLOGY · FUTURE</span><span>© <span id="year"></span> SYNTRA</span></div></footer>
 <script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+<script>(()=>{const b=document.getElementById("menu-toggle"),n=document.getElementById("main-nav");if(!b||!n)return;const close=()=>{b.setAttribute("aria-expanded","false");b.setAttribute("aria-label","Mở menu");n.classList.remove("open")};b.addEventListener("click",()=>{const open=b.getAttribute("aria-expanded")==="true";b.setAttribute("aria-expanded",String(!open));b.setAttribute("aria-label",open?"Mở menu":"Đóng menu");n.classList.toggle("open",!open)});n.querySelectorAll("a").forEach(a=>a.addEventListener("click",close));document.addEventListener("keydown",e=>{if(e.key==="Escape"){close();b.focus()}});document.addEventListener("click",e=>{if(!n.contains(e.target)&&!b.contains(e.target))close()})})();</script>
 </body>
 </html>
