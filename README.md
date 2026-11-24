@@ -2,7 +2,7 @@
 
 Official website source for SYNTRA Group.
 
-Current website version: **v2.6**.
+Current website version: **v2.7**.
 
 ## Deploy with GitHub Pages
 
@@ -15,31 +15,39 @@ Current website version: **v2.6**.
 ## Website files
 
 - `about/index.html` — SYNTRA GROUP introduction, mission, development principles and ecosystem overview.
-- `index.html` — responsive SYNTRA landing page with accessible mobile navigation, social metadata, reading progress and latest-updates preview, project testing status, Download Center entry and Documentation Center, Support Center and Community navigation (v1.9; retained in v2.0).
+- `index.html` — responsive SYNTRA landing page with accessible navigation and product overview.
 - `products/syntra-os.html` — product overview for SYNTRA OS.
-- `products/syntra-files.html` — product overview for SYNTRA FILES (v0.75.0; testing and upgrade).
-- `products/syntra-social.html` — product overview for SYNTRA SOCIAL (Prototype 1.8; local-only prototype).
-- `updates/index.html` — version history and project update notes for SYNTRA OS and SYNTRA FILES.
-- `downloads/index.html` — Download Center with release status and a five-step release verification standard; direct installation links remain disabled until verified official packages are published (v2.0).
-- `docs/index.html` — Documentation Center linking to product, build, contribution, architecture and QEMU testing documentation in the source repositories.
+- `products/syntra-files.html` — product overview for SYNTRA FILES.
+- `products/syntra-social.html` — product overview for SYNTRA SOCIAL.
+- `updates/index.html` — public announcements only; internal development notes and sensitive technical details are not published here.
+- `downloads/index.html` — public Download Center showing availability and official release links; unavailable packages remain clearly marked.
+- `docs/index.html` — Documentation Center linking to public product and project documentation.
 - `support/index.html` — Support Center with product FAQs, GitHub issue links, safe bug-report guidance and public contact information.
-- `community/index.html` — SYNTRA Community page with the Discord invite and user-provided QR image.
+- `community/index.html` — SYNTRA Community page.
 - `assets/syntra-files-logo.svg` — SYNTRA FILES product logo.
 - `assets/syntra-mark.svg` — shared SYNTRA brand mark and favicon.
 - Product source repositories:
   - [SYNTRA OS](https://github.com/dea78799-dotcom/SyntraOS)
   - [SYNTRA FILES](https://github.com/dea78799-dotcom/Syntra-Files)
-  - [SYNTRA SOCIAL](https://github.com/dea78799-dotcom/SYNTRA-Social)
+  - [SYNTRA SOCIAL](https://github.com/dea78799-dotcom/Syntra-Social)
 
 ## APK publishing
 
-SYNTRA FILES is currently in testing and upgrade (latest repository README checked for this website update: v0.75.0). SYNTRA SOCIAL is Prototype 1.8; its content and media remain local to the current browser, with no real accounts or backend yet. The Download Center intentionally keeps APK installation disabled until a real official package has been built and checked. SYNTRA OS has no end-user installer confirmed. Never present a CI artifact or source-code ZIP as a ready-to-install release.
+Do not present a CI artifact or source-code ZIP as a ready-to-install release. SYNTRA FILES and SYNTRA OS download actions remain unavailable until an official end-user package is published and verified. The Download Center links to the official release pages for status checking.
 
 Public contact: vanhuong05042025@gmail.com
 
 Support Center: https://dea78799-dotcom.github.io/SYNTRA-Website/support/
 
 Community: https://dea78799-dotcom.github.io/SYNTRA-Website/community/
+
+## v2.7 — Public information and Download Center refinement
+
+- Replaced the detailed project changelog with a concise public announcements page.
+- Removed detailed internal progress notes, implementation descriptions, architecture references and operational disclosures from Updates.
+- Simplified Download Center to show product availability and official release-page links.
+- Kept unavailable APK and OS installer downloads clearly disabled; no unverified package is presented as ready to install.
+- Updated page descriptions and public navigation while preserving SYNTRA's dark and muted-gold visual identity.
 
 ## v2.6 — Product pages navigation refresh
 
@@ -62,7 +70,6 @@ Community: https://dea78799-dotcom.github.io/SYNTRA-Website/community/
 - Improved desktop project discovery with a three-column product grid, refined card hierarchy and restrained gold detailing.
 - Added a compact research / engineering / improvement strip and clearer ecosystem messaging.
 - Preserved mobile navigation, keyboard focus visibility, reduced-motion support, existing product routes and official contact details.
-- Verified all nine referenced local product, support, documentation, update, download and brand-mark paths exist in the repository.
 
 ## v2.3 — Latest product version synchronization
 
@@ -86,6 +93,6 @@ Community: https://dea78799-dotcom.github.io/SYNTRA-Website/community/
 
 ## v2.0 — Download Center release verification
 
-- Added a five-step release verification standard covering official source, product/version/architecture identity, package integrity, release notes and SHA-256.
-- Kept direct APK and OS installer actions disabled because no verified end-user package is currently confirmed.
+- Added a release verification standard covering official source, product/version/architecture identity, package integrity, release notes and SHA-256.
+- Kept direct APK and OS installer actions disabled because no verified end-user package was confirmed.
 - SYNTRA FILES remains in testing and upgrade.
