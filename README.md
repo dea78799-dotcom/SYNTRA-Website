@@ -2,7 +2,7 @@
 
 Official website source for SYNTRA Group.
 
-Current website version: **v2.8**.
+Current website version: **v2.9**.
 
 ## Deploy with GitHub Pages
 
@@ -104,3 +104,13 @@ Community: https://dea78799-dotcom.github.io/SYNTRA-Website/community/
 - Added a release verification standard covering official source, product/version/architecture identity, package integrity, release notes and SHA-256.
 - Kept direct APK and OS installer actions disabled because no verified end-user package was confirmed.
 - SYNTRA FILES remains in testing and upgrade.
+
+
+## SEO and performance
+
+- Every public HTML page includes a canonical URL and Open Graph/Twitter sharing metadata.
+- `sitemap.xml` lists the public website pages for search engine discovery.
+- `robots.txt` allows public crawling and points crawlers to the sitemap.
+- Images use asynchronous decoding; the community QR image is lazy-loaded.
+- The homepage and community page establish a preconnect hint for the external image host they use.
+- SEO metadata and local file paths were checked at source level. Browser rendering, live deployment, and real-device performance measurements still require separate testing.
