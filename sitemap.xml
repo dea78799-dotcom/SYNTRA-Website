@@ -36,6 +36,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://dea78799-dotcom.github.io/SYNTRA-Website/status/</loc>
+    <changefreq>hourly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://dea78799-dotcom.github.io/SYNTRA-Website/support/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
