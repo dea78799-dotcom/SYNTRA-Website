@@ -252,6 +252,27 @@ footer{background:linear-gradient(180deg,transparent,rgba(216,181,109,.025))}
   .card:hover,.principle:hover{transform:none;box-shadow:none}
 }
 
+
+
+/* v2.15 — navigation and mobile usability */
+@media(min-width:701px){
+  .nav{gap:clamp(10px,1.5vw,20px)}
+  #main-nav{flex:1 1 auto;min-width:0;max-width:calc(100% - 170px);justify-content:flex-end;gap:clamp(8px,1vw,14px);overflow-x:auto;overflow-y:hidden;white-space:nowrap;scrollbar-width:none;padding:4px 2px}
+  #main-nav::-webkit-scrollbar{display:none}
+  #main-nav a{flex:0 0 auto;font-size:clamp(10px,.92vw,12px)}
+  #main-nav .nav-cta{padding:8px 11px}
+}
+@media(max-width:700px){
+  #main-nav{max-height:calc(100dvh - 68px);overflow-y:auto;overscroll-behavior:contain;padding-bottom:max(18px,env(safe-area-inset-bottom))}
+  #main-nav a{min-height:44px}
+  .hero-actions .button{flex:1 1 170px}
+  .hero-visual{min-height:210px}
+}
+@media(max-width:380px){
+  .hero-actions{gap:9px}
+  .hero-actions .button{flex-basis:100%;width:100%}
+}
+
 </style>
 <link rel="preconnect" href="https://raw.githubusercontent.com" crossorigin>
 </head>
@@ -268,7 +289,9 @@ footer{background:linear-gradient(180deg,transparent,rgba(216,181,109,.025))}
         <a href="about/">Giới thiệu</a>
         <a href="#products">Sản phẩm</a>
         <a href="projects/">Project Hub</a>
-        <a href="updates/">Cập nhật</a>\n        <a href="changelog/">Changelog</a><a href="status/">Status</a>
+        <a href="updates/">Cập nhật</a>
+        <a href="changelog/">Changelog</a>
+        <a href="status/">Status</a>
         <a href="downloads/">Download Center</a>
         <a href="docs/">Tài liệu</a>
         <a href="support/">Hỗ trợ</a>
@@ -287,6 +310,7 @@ footer{background:linear-gradient(180deg,transparent,rgba(216,181,109,.025))}
             <p class="lead">SYNTRA GROUP phát triển hệ sinh thái công nghệ riêng — từ nền tảng hệ thống đến những ứng dụng phục vụ công việc hằng ngày. Mỗi sản phẩm được xây dựng, kiểm thử và cải tiến theo từng giai đoạn.</p>
             <div class="hero-actions">
               <a class="button primary" href="#products">Khám phá hệ sinh thái <span aria-hidden="true">↗</span></a>
+              <a class="button" href="projects/">Mở Project Hub</a>
               <a class="button" href="#about">Tìm hiểu SYNTRA</a>
             </div>
             <div class="hero-note">TỰ NGHIÊN CỨU. TỰ PHÁT TRIỂN. TỰ LÀM CHỦ CÔNG NGHỆ.</div>
