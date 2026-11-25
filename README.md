@@ -2,13 +2,21 @@
 
 Official website source for SYNTRA Group.
 
-Current website version: **v2.14**.
+Current website version: **v2.15**.
+
+## v2.15 — Active Project Catalog Cleanup
+
+- Removed the discontinued SYNTRA FILES project from active product, project, update, download, documentation, support and status pages.
+- Kept its old Changelog entry as a clearly labeled historical archive item.
+- Removed the retired product page and logo from the public website and sitemap.
+- Reconciled current project listings without changing the historical notes below.
 
 ## v2.14 — Status Incident History
 
 - Added a public Status page with clear separation between monitored website URLs and products without public endpoints.
 - Added a scheduled GitHub Actions monitor that checks public pages every 30 minutes and updates the latest status data.
-- Added a bounded incident history that records only status transitions and recovery events.\n- Kept monitoring scope explicit: HTTP reachability is not represented as full product health.
+- Added a bounded incident history that records only status transitions and recovery events.
+- Kept monitoring scope explicit: HTTP reachability is not represented as full product health.
 - Added Status navigation and sitemap coverage while preserving public-information and security boundaries.
 
 ## v2.12 — Public Changelog
@@ -40,26 +48,23 @@ Current website version: **v2.14**.
 - `about/index.html` — SYNTRA GROUP introduction, mission, development principles and ecosystem overview.
 - `index.html` — responsive SYNTRA landing page with accessible navigation and product overview.
 - `products/syntra-os.html` — product overview for SYNTRA OS.
-- `products/syntra-files.html` — product overview for SYNTRA FILES.
 - `products/syntra-social.html` — product overview for SYNTRA SOCIAL.
 - `changelog/index.html` — public project change history with filters, search and source links.
 - `status/index.html` — public service-status dashboard.
-- `status/data.json` — latest automated public endpoint checks.\n- `changelog/index.html` — public project change history with filters, search and source links.
+- `status/data.json` — latest automated public endpoint checks.
 - `updates/index.html` — public announcements only; internal development notes and sensitive technical details are not published here.
 - `downloads/index.html` — public Download Center showing availability and official release links; unavailable packages remain clearly marked.
 - `docs/index.html` — public-facing Documentation Center with product status and safe user guidance; internal architecture and CI details are not exposed.
 - `support/index.html` — Support Center with product FAQs, GitHub issue links, safe bug-report guidance and public contact information.
 - `community/index.html` — SYNTRA Community page.
-- `assets/syntra-files-logo.svg` — SYNTRA FILES product logo.
 - `assets/syntra-mark.svg` — shared SYNTRA brand mark and favicon.
 - Product source repositories:
   - [SYNTRA OS](https://github.com/dea78799-dotcom/SyntraOS)
-  - [SYNTRA FILES](https://github.com/dea78799-dotcom/Syntra-Files)
   - [SYNTRA SOCIAL](https://github.com/dea78799-dotcom/Syntra-Social)
 
 ## APK publishing
 
-Do not present a CI artifact or source-code ZIP as a ready-to-install release. SYNTRA FILES and SYNTRA OS download actions remain unavailable until an official end-user package is published and verified. The Download Center links to the official release pages for status checking.
+Do not present a CI artifact or source-code ZIP as a ready-to-install release. SYNTRA OS download actions remain unavailable until an official end-user package is published and verified. The Download Center links to the official release pages for status checking.
 
 Public contact: vanhuong05042025@gmail.com
 
