@@ -1,35 +1,35 @@
 {
   "schema_version": 1,
   "monitoring": "active",
-  "checked_at": "2026-11-27T10:33:45+00:00",
+  "checked_at": "2026-11-27T19:43:12+00:00",
   "checks": [
     {
       "name": "SYNTRA Website",
       "path": "/",
       "status": "up",
       "http_status": 200,
-      "response_ms": 267
+      "response_ms": 142
     },
     {
       "name": "Project Hub",
       "path": "/projects/",
       "status": "up",
       "http_status": 200,
-      "response_ms": 135
+      "response_ms": 60
     },
     {
       "name": "Public Updates",
       "path": "/updates/",
       "status": "up",
       "http_status": 200,
-      "response_ms": 136
+      "response_ms": 65
     },
     {
       "name": "Changelog",
       "path": "/changelog/",
       "status": "up",
       "http_status": 200,
-      "response_ms": 182
+      "response_ms": 50
     }
   ],
   "history": []
